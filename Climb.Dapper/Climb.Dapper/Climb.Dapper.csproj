@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}</ProjectGuid>
+    <ProjectGuid>{4C9A970C-96D4-476D-BA0A-8986F945552A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Climb.MySqlDbHelper</RootNamespace>
-    <AssemblyName>Climb.MySqlDbHelper</AssemblyName>
+    <RootNamespace>Climb.Dapper</RootNamespace>
+    <AssemblyName>Climb.Dapper</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,14 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MySqlDbHelper.cs" />
+    <Compile Include="Dapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Climb.DbProvider\Climb.DbProvider\Climb.DbProvider.csproj">
-      <Project>{5f4122ec-122b-492c-b5e6-d9324a1451cd}</Project>
-      <Name>Climb.DbProvider</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

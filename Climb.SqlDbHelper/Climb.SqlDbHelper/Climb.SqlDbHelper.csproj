@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}</ProjectGuid>
+    <ProjectGuid>{DF2C3FBC-6A06-4BD7-B82C-16D7583408F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Climb.MySqlDbHelper</RootNamespace>
-    <AssemblyName>Climb.MySqlDbHelper</AssemblyName>
+    <RootNamespace>Climb.SqlDbHelper</RootNamespace>
+    <AssemblyName>Climb.SqlDbHelper</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MySqlDbHelper.cs" />
+    <Compile Include="SqlDbHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
