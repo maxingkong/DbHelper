@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Climb.MySqlDbHelper", "..\Climb.MySqlDbHelper\Climb.MySqlDbHelper\Climb.MySqlDbHelper.csproj", "{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Climb.DbProvider", "..\Climb.DbProvider\Climb.DbProvider\Climb.DbProvider.csproj", "{5F4122EC-122B-492C-B5E6-D9324A1451CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC70D9F-86E5-4F51-8510-FBC3D44A8FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4122EC-122B-492C-B5E6-D9324A1451CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4122EC-122B-492C-B5E6-D9324A1451CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4122EC-122B-492C-B5E6-D9324A1451CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4122EC-122B-492C-B5E6-D9324A1451CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
