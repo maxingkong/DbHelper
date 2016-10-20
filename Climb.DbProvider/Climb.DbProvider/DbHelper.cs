@@ -19,6 +19,7 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 // ReSharper disable All
 
@@ -196,6 +197,29 @@ namespace Climb.DbProvider
             }
             return execSqlRes;
         }
+
+        public int ExecSqlAsync(string sqlStr, params IDataParameter[] dbParameters)
+        {
+            int execSqlRes = -1;
+            SetDbCommandOpen(sqlStr, CommandType.Text, dbParameters);
+            try
+            {
+#if DEBUG
+                DateTime btime = DateTime.Now;
+#endif
+                execSqlRes = DbCommand.ExecuteNonQueryAsync().Result;
+#if DEBUG
+                DateTime etime = DateTime.Now;
+                _queryDetaiLog += GetQueryDetail(btime, etime);
+#endif
+            }
+            catch (DbException dbException)
+            {
+                ShowException(dbException);
+            }
+            return execSqlRes;
+        }
+
         #endregion
 
         #region 获取单条记录------------------------------------------------------------------测试完成
@@ -300,6 +324,12 @@ namespace Climb.DbProvider
         #endregion
 
         #region 获取数据集--------------------------------------------------------------------测试完成
+
+        public Task<List<T>> GetDataInfolListAsync<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -371,6 +401,12 @@ namespace Climb.DbProvider
             }
             return t;
         }
+
+        public Task<T> GetDataInfoAsync<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 获取实体list
         /// </summary>

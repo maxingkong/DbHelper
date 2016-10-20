@@ -21,8 +21,10 @@ namespace Climb.MySqlDbHelper
         public MySqlDbHelper(string connectionstring)
             : base(DbProviderFactories.GetFactory(new MySqlConnection()), connectionstring)
         {
-            List<string> list;
+         
         }
+
+
         private static string DataTableToCsv(DataTable table)
         {
             //以半角逗号（即,）作分隔符,列为空也要表达其存在。

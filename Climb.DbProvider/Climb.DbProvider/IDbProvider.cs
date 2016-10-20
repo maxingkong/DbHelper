@@ -3,6 +3,7 @@ using System.Data.Common;
 using System.Data;
 using System.Collections.Generic;
 using System.Collections;
+using System.Threading.Tasks;
 
 namespace Climb.DbProvider
 {
@@ -58,6 +59,14 @@ namespace Climb.DbProvider
         int ExecSql(string sqlStr, params IDataParameter[] dbParameters);
 
         /// <summary>
+        /// 异步执行一个sql 语句 update save delete
+        /// </summary>
+        /// <param name="sqlStr">sql语句</param>
+        /// <param name="dbParameters">参数列表集合</param>
+        /// <returns></returns>
+        int ExecSqlAsync(string sqlStr, params IDataParameter[] dbParameters);
+
+        /// <summary>
         /// 获取对象
         /// </summary>
         /// <param name="sqlStr">sql语句</param>
@@ -66,6 +75,7 @@ namespace Climb.DbProvider
         /// <typeparam name="T">返回一个类的对象</typeparam>
         /// <returns>返回一个类的对象</returns>
         T GetDataInfo<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters);
+
 
         /// <summary>
         /// 从数据库获取对象集合
@@ -76,6 +86,7 @@ namespace Climb.DbProvider
         /// <typeparam name="T">T对象</typeparam>
         /// <returns>返回一个类对象的集合</returns>
         List<T> GetDataInfolList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters);
+
 
         /// <summary>
         /// 从数据库获取数据集DataSet
@@ -95,7 +106,7 @@ namespace Climb.DbProvider
 
         #endregion
 
-        #region
+        #region 执行存储过程
         /// <summary>
         /// 返回一个数据集合
         /// </summary>
