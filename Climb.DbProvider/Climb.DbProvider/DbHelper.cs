@@ -325,10 +325,7 @@ namespace Climb.DbProvider
 
         #region 获取数据集--------------------------------------------------------------------测试完成
 
-        public Task<List<T>> GetDataInfolListAsync<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
-        {
-            throw new NotImplementedException();
-        }
+     
 
         /// <summary>
         /// 
@@ -393,7 +390,7 @@ namespace Climb.DbProvider
         /// <returns></returns>
         public T GetDataInfo<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
         {
-            var list = GetDataInfolList(sqlStr, func, dbParameters);
+            var list = GetDataInfoList(sqlStr, func, dbParameters);
             var t = default(T);
             if (list != null && list.Any())
             {
@@ -402,10 +399,7 @@ namespace Climb.DbProvider
             return t;
         }
 
-        public Task<T> GetDataInfoAsync<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
-        {
-            throw new NotImplementedException();
-        }
+    
 
         /// <summary>
         /// 获取实体list
@@ -415,7 +409,7 @@ namespace Climb.DbProvider
         /// <param name="func"></param>
         /// <param name="dbParameters"></param>
         /// <returns></returns>
-        public List<T> GetDataInfolList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
+        public List<T> GetDataInfoList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters)
         {
 
             DbDataReader reader = GetDataReader(sqlStr, dbParameters);
@@ -522,7 +516,7 @@ namespace Climb.DbProvider
 
             string sqlstr = dbPage.GetComandSqlStr();
             IDataParameter[] parameters = dbPage.GetPageParams();
-            var list = GetDataInfolList(sqlstr, tFunc, parameters);
+            var list = GetDataInfoList(sqlstr, tFunc, parameters);
             return list;
         }
         #endregion

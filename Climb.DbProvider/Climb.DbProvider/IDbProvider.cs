@@ -85,7 +85,7 @@ namespace Climb.DbProvider
         /// <param name="dbParameters">参数集合</param>
         /// <typeparam name="T">T对象</typeparam>
         /// <returns>返回一个类对象的集合</returns>
-        List<T> GetDataInfolList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters);
+        List<T> GetDataInfoList<T>(string sqlStr, Func<IDataReader, T> func, params IDataParameter[] dbParameters);
 
 
         /// <summary>
